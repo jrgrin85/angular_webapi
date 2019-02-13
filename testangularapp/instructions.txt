@@ -1,0 +1,27 @@
+A simple Angular JWT Authentication, Web API, and XML Reader test
+
+
+The following simple application is designed with the following:
+
+Angular 6
+Web API 2.0 C# (Visual Studio 2017 Community)
+Node.js
+
+
+Instructions:
+
+1. In the Web API's web.config file, the following settings need to be configured (in case you don't want to use the default values provided):
+ + sectoken - The secret token used to help create the security key used to generate a jwt.
+ + issuer - The issuer that will provide the certificate for generating a jwt
+ + audience - The targeted site that will accept the jwt
+ + xmlpath - The default path to read the xml file for testing
+
+2. To Start the application, open up the Web API project in Visual Studio (2017 version) and press F5 to run.
+3. Once the web api application is running, start the angular project by opening up Node.js.  Then go to the testangularapp folder and type in the following:
+	ng server --port <port number> --open
+4. When the angular web app opens, enter the username and password information displayed on the site in the text boxes.
+5. When successfully logged in, you will see the information from the xml file displayed on screen.  To log out, click on the link below the screen to take you back to the log in screen.
+   You will find the following: "To log out, click here"
+6. The XmlFiles directory is located in the testAppWebApi directory. You can move the directory anywhere on your computer, but you'll need to specify the path in the web.config file in order for the web api to read the xml file.
+
+
